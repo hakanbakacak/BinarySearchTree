@@ -4,20 +4,24 @@
 #include<iostream>
 using namespace std;
 
+typedef struct binary_tree_nodes{
+int data;
+struct binary_tree_nodes *left, *right;
+}Node;
+
+
 class BSTree
 {
-    BSTree * root=NULL;
 public:
     BSTree();
-    bool addItem(int x);
+    bool addItem(Node *root,int key);
     bool deleteItem();
     void listPre();
-    void listIn();
+    void listIn(Node *root);
     void listPost();
 private:
-    int data;
-    BSTree *right;
-    BSTree *left;
+    Node node;
+
 };
 
 #endif // BSTREE_H

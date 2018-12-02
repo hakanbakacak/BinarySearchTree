@@ -3,11 +3,12 @@ using namespace std;
 #include "BSTree.h"
 int main()
 {
+    Node *root=NULL;
     BSTree library;
-    cout<<library.addItem(15)<<endl;
-    cout<<library.addItem(16)<<endl;
 
+    cout<<library.addItem(root,15)<<endl;
+    cout<<library.addItem(root,16)<<endl;
+    library.listIn(root);
 
-
-   return 0;
+    return 0;
 }
